@@ -1,30 +1,43 @@
 import { CommonModule, ViewportScroller } from '@angular/common';
-import { Component, ElementRef, ViewChild } from '@angular/core';
-import { HomeComponent } from '../home/home.component';
-import { ContactComponent } from '../contact/contact.component';
-import { ExperianceComponent } from '../experiance/experiance.component';
-import { ProjectsComponent } from '../projects/projects.component';
+import { Component, HostListener} from '@angular/core';
+
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, HomeComponent, ProjectsComponent, ExperianceComponent, ContactComponent ],
+  imports: [CommonModule],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-  @ViewChild('projectsSection') projectsSection!: ElementRef;
+  activeSection: string | undefined;
 
   constructor(private viewportScroller: ViewportScroller) {}
 
-scrollToSection(sectionId: string) {
-  const yOffset = -60; // Adjust the offset as per your layout
-  const element = document.getElementById(sectionId);
-  if (element) {
-    element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+  @HostListener('window:scroll', ['$event'])
+  onScroll() {
+    this.checkActiveSection();
   }
-}
 
-  
+  scrollToSection(sectionId: string) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 
+  checkActiveSection() {
+    const scrollPosition = this.viewportScroller.getScrollPosition();
+    const sections = ['home', 'projects', 'experience', 'contact']; 
+    for (const section of sections) {
+      const element = document.getElementById(section);
+      if (element) {
+        const rect = element.getBoundingClientRect();
+        if (rect.top <= 0 && rect.bottom > 0) {
+          this.activeSection = section;
+          break;
+        }
+      }
+    }
+  }
 }

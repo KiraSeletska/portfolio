@@ -4,23 +4,20 @@
         <ul class="nav-list">
 
             <li class="nav-item">
-                <a class="nav-link" (click)="scrollToSection('home')">Home</a>
+                <a class="nav-link" [class.active]="activeSection === 'home'" (click)="scrollToSection('home')">Home</a>
             </li>
 
             <li class="nav-item">
-                <a (click)="scrollToSection('projects')" class="nav-link">Projects</a>
+                <a class="nav-link" [class.active]="activeSection === 'projects'" (click)="scrollToSection('projects')" >Projects</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" (click)="scrollToSection('experiance')">Experiance</a>
+                <a class="nav-link" [class.active]="activeSection === 'experience'" (click)="scrollToSection('experience')">Experience</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link"(click)="scrollToSection('contact')">Contact</a>
+                <a class="nav-link" [class.active]="activeSection === 'contact'" (click)="scrollToSection('contact')">Contact</a>
             </li>
         </ul>
-        <progress value="0" max="100"></progress>
     </nav>
-
-
 </header>
