@@ -1,6 +1,6 @@
 import { CommonModule, ViewportScroller } from '@angular/common';
 import { Component, HostListener} from '@angular/core';
-
+import { gsap } from 'gsap';
 
 @Component({
   selector: 'app-header',
@@ -11,18 +11,21 @@ import { Component, HostListener} from '@angular/core';
 })
 export class HeaderComponent {
   activeSection: string | undefined;
+  logoVisible: boolean = false;
 
   constructor(private viewportScroller: ViewportScroller) {}
 
   @HostListener('window:scroll', ['$event'])
   onScroll() {
     this.checkActiveSection();
+    this.onWindowScroll();
   }
 
   scrollToSection(sectionId: string) {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
+      this.animateLogoOut();
     }
   }
 
@@ -40,4 +43,24 @@ export class HeaderComponent {
       }
     }
   }
+
+  onWindowScroll() {
+    const homeSection = document.getElementById('home');
+  if (homeSection) {
+    const rect = homeSection.getBoundingClientRect();
+    if (rect.bottom <= 0) {
+      this.animateLogoIn();
+    } else {
+      this.animateLogoOut();
+    }
+  }
+  }
+  animateLogoIn() {
+    gsap.to('.logo', { duration: 0.5, opacity: 1, y: 0, x: 0 });
+  }
+  
+  animateLogoOut() {
+    gsap.to('.logo', { duration: 0.5, opacity: 0, y: 250, x: 250 });
+  }
+  
 }
