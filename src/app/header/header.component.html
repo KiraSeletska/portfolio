@@ -1,1 +1,26 @@
-<p>header works!</p>
+
+<header class="main">
+    <nav>
+        <ul class="nav-list">
+
+            <li class="nav-item">
+                <a class="nav-link" (click)="scrollToSection('home')">Home</a>
+            </li>
+
+            <li class="nav-item">
+                <a (click)="scrollToSection('projects')" class="nav-link">Projects</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" (click)="scrollToSection('experiance')">Experiance</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link"(click)="scrollToSection('contact')">Contact</a>
+            </li>
+        </ul>
+        <progress value="0" max="100"></progress>
+    </nav>
+
+
+</header>
