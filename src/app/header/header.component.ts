@@ -10,10 +10,15 @@ import { gsap } from 'gsap';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
+
   activeSection: string | undefined;
   logoVisible: boolean = false;
+  logoWidth: number = 20;
+  logoHeight: number = 20;
 
-  constructor(private viewportScroller: ViewportScroller) {}
+  constructor(private viewportScroller: ViewportScroller) {
+    this.checkActiveSection();
+  }
 
   @HostListener('window:scroll', ['$event'])
   onScroll() {
@@ -25,7 +30,7 @@ export class HeaderComponent {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
-      this.animateLogoOut();
+    //  this.animateLogoOut();
     }
   }
 
@@ -55,12 +60,21 @@ export class HeaderComponent {
     }
   }
   }
+  
   animateLogoIn() {
     gsap.to('.logo', { duration: 0.5, opacity: 1, y: 0, x: 0 });
   }
   
   animateLogoOut() {
-    gsap.to('.logo', { duration: 0.5, opacity: 0, y: 250, x: 250 });
+    const targetX = (window.innerWidth - this.logoWidth) / 2;
+    const targetY = (window.innerHeight - this.logoHeight) / 2;
+  
+    gsap.to('.logo', { duration: 0.5, opacity: 0, x: targetX, y: targetY });
   }
   
+  
+  
+  /*
+  
+  */
 }
