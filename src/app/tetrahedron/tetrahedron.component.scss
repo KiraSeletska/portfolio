@@ -1,0 +1,29 @@
+.tetrahedron {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 86.6px solid black; /* Треугольник высотой 100px */
+  position: relative;
+
+  &:after,
+  &:before {
+    content: '';
+    position: absolute;
+    top: -86.6px; /* Высота треугольника, чтобы правильно отрисовать треугольники */
+    left: -50px; /* Смещение влево, чтобы правильно расположить дополнительные треугольники */
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 86.6px solid black; /* Треугольник высотой 100px */
+  }
+
+  &:before {
+    transform: rotate(120deg); /* Поворачиваем на 120 градусов, чтобы создать дополнительные треугольники */
+  }
+
+  &:after {
+    transform: rotate(-120deg); /* Поворачиваем на -120 градусов, чтобы создать дополнительные треугольники */
+  }
+}
