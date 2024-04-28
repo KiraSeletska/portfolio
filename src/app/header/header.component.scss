@@ -1,6 +1,8 @@
 header{
     width: 100%;
     position: relative;
+    z-index: 100;
+
     & nav{
       position: fixed;
       width: 100%;
@@ -24,7 +26,7 @@ header{
   }
 
   .logo-container {
-    z-index: 111;
+    z-index: 101;
     position: fixed;
     top: 5px; 
     left: 50px;
