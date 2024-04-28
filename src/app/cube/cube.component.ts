@@ -13,12 +13,12 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 export class CubeComponent implements AfterViewInit {
   @ViewChild('cube') cubeRef!: ElementRef<HTMLDivElement>;
   rots = [
-    { ry: 0,   rx: 0  }, // 1
-    { ry: 90,  rx: 0  }, // 2
-    { ry: 180, rx: 0  }, // 3
-    { ry: 270, rx: 0  }, // 4
-    { ry: 0,   rx: 90 }, // 5
-    { ry: 0,   rx:-90 }  // 6
+    { ry: 0,   rx: 0  }, 
+    { ry: 90,  rx: 0  }, 
+    { ry: 180, rx: 0  }, 
+    { ry: 270, rx: 0  }, 
+    { ry: 0,   rx: 90 }, 
+    { ry: 0,   rx:-90 } 
   ];
 
   constructor() {}

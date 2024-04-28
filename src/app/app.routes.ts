@@ -5,13 +5,15 @@ import { ProjectsComponent } from './projects/projects.component';
 import { NgModule } from '@angular/core';
 
 export const routes: Routes = [
-    { path: 'home', component: HomeComponent },
-{ path: 'contact', component: ContactComponent },
-{ path: 'projects', component: ProjectsComponent }
+  { path: 'home', component: HomeComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'projects', component: ProjectsComponent },
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' })],
-    exports: [RouterModule]
-  })
-  export class AppRoutingModule { }
+  imports: [
+    RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' }),
+  ],
+  exports: [RouterModule],
+})
+export class AppRoutingModule {}

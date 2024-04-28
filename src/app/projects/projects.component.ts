@@ -28,7 +28,7 @@ export class ProjectsComponent implements AfterViewInit {
         start: "50% 50%",
         endTrigger: ".projectsWrapper",
         end: "bottom 50%",
-        markers: true,
+       // markers: true,
       }
     });
 

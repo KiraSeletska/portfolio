@@ -1,5 +1,5 @@
 import { CommonModule, ViewportScroller } from '@angular/common';
-import { Component, HostListener} from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { gsap } from 'gsap';
 
 @Component({
@@ -10,7 +10,6 @@ import { gsap } from 'gsap';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-
   activeSection: string | undefined;
   logoVisible: boolean = false;
   logoWidth: number = 20;
@@ -30,13 +29,12 @@ export class HeaderComponent {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
-    //  this.animateLogoOut();
     }
   }
 
   checkActiveSection() {
     const scrollPosition = this.viewportScroller.getScrollPosition();
-    const sections = ['home', 'projects', 'experience', 'contact']; 
+    const sections = ['home', 'projects', 'experience', 'contact'];
     for (const section of sections) {
       const element = document.getElementById(section);
       if (element) {
@@ -51,30 +49,24 @@ export class HeaderComponent {
 
   onWindowScroll() {
     const homeSection = document.getElementById('home');
-  if (homeSection) {
-    const rect = homeSection.getBoundingClientRect();
-    if (rect.bottom <= 0) {
-      this.animateLogoIn();
-    } else {
-      this.animateLogoOut();
+    if (homeSection) {
+      const rect = homeSection.getBoundingClientRect();
+      if (rect.bottom <= 0) {
+        this.animateLogoIn();
+      } else {
+        this.animateLogoOut();
+      }
     }
   }
-  }
-  
+
   animateLogoIn() {
     gsap.to('.logo', { duration: 0.5, opacity: 1, y: 0, x: 0 });
   }
-  
+
   animateLogoOut() {
     const targetX = (window.innerWidth - this.logoWidth) / 2;
     const targetY = (window.innerHeight - this.logoHeight) / 2;
-  
+
     gsap.to('.logo', { duration: 0.5, opacity: 0, x: targetX, y: targetY });
   }
-  
-  
-  
-  /*
-  
-  */
 }
