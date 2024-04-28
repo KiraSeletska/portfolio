@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
-import { TetrahedronComponent } from '../tetrahedron/tetrahedron.component';
+import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IcosahedronComponent } from '../icosahedron/icosahedron.component';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 
 @Component({
   selector: 'app-contact',
@@ -12,4 +14,6 @@ import { IcosahedronComponent } from '../icosahedron/icosahedron.component';
 })
 export class ContactComponent {
 
+ 
+ 
 }

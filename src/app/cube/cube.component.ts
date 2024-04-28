@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger'; 
 
 @Component({
   selector: 'app-cube',
@@ -10,7 +11,7 @@ import { gsap } from 'gsap';
   styleUrl: './cube.component.scss'
 })
 export class CubeComponent implements AfterViewInit {
-  
+  @ViewChild('cube') cubeRef!: ElementRef<HTMLDivElement>;
   rots = [
     { ry: 0,   rx: 0  }, // 1
     { ry: 90,  rx: 0  }, // 2
@@ -23,12 +24,16 @@ export class CubeComponent implements AfterViewInit {
   constructor() {}
 
   ngAfterViewInit() {
-    gsap.set(".face", {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const tl = gsap.timeline(); 
+
+    gsap.set(".face", { 
       rotateY: (i) => this.rots[i].ry,
       rotateX: (i) => this.rots[i].rx,
       transformOrigin: "50% 50% -150px",
       z: 150,
-     // background:(i) => 'url(https://assets.codepen.io/721952/dieSprite_1.svg) 0px -' + String(i * 300) + 'px'
     });
+
   }
 }
