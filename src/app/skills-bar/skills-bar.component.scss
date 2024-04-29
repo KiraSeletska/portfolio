@@ -1,0 +1,24 @@
+.skill {
+  height: 100vh;
+  & .progress-bar {
+    & .title {
+      transform: translateY(20px);
+      margin-bottom: 30px;
+    }
+
+    & .progress {
+      height: 20px;
+      background-color: #f88f8f;
+      border-radius: 10px;
+      width: 0;
+
+      & .procent {
+        width: 100%;
+        text-align: right;
+        color: white;
+        font-size: 15px;
+        padding-right: 15px;
+      }
+    }
+  }
+}

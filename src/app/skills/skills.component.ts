@@ -1,12 +1,19 @@
 import { Component } from '@angular/core';
 
+import { CommonModule } from '@angular/common';
+import { SkillsBarComponent } from '../skills-bar/skills-bar.component';
+
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, SkillsBarComponent ],
   templateUrl: './skills.component.html',
-  styleUrl: './skills.component.scss'
+  styleUrls: ['./skills.component.scss'],
 })
-export class SkillsComponent {
+export class SkillsComponent  {
 
-}
+  }
+  
+  
+  
+
