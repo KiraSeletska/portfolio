@@ -24,7 +24,7 @@ export class ContactComponent implements AfterViewInit{
         start: '50% 50%',
         endTrigger: '.contactWrapper',
         end: 'bottom 50%',
-         markers: true,
+       //  markers: true,
       },
     });
 

@@ -1,13 +1,7 @@
 
-<div  class="projectsWrapper">
-   <!--
-<div class="cubeContainer">
-        <app-cube id="cubWrapper"></app-cube>
-    </div>
-   --> 
-
+<div  class="projectsWrapper" id="projectsWrapper">
     <div class="vedeosContainer">
-        <div *ngFor="let projectCard of briefProjectCards" class="videoWrapper">
+        <div *ngFor="let projectCard of briefProjectCards" class="videoWrapper" #videoWrapper>
             <video autoplay loop>
                 <source [src]="projectCard.link" type="video/mp4">
                 Your browser does not support the video tag.
@@ -25,7 +19,4 @@
             </div>
         </div>
     </div>
-    
-
-
 </div>
