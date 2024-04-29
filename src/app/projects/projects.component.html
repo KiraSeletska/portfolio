@@ -1,4 +1,31 @@
 
 <div  class="projectsWrapper">
-    <app-cube id="cubWrapper"></app-cube>
+   <!--
+<div class="cubeContainer">
+        <app-cube id="cubWrapper"></app-cube>
+    </div>
+   --> 
+
+    <div class="vedeosContainer">
+        <div *ngFor="let projectCard of briefProjectCards" class="videoWrapper">
+            <video autoplay loop>
+                <source [src]="projectCard.link" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="videoInfo">
+               
+                <div class="skills">
+                    <ng-container *ngFor="let skill of projectCard.skills">
+                        <ng-container *ngIf="skills[skill]">
+                            <img class="icon" [src]="skills[skill]" [alt]="skill">
+                        </ng-container>
+                    </ng-container>
+                </div>
+                <h3>{{ projectCard.title }}</h3>
+            </div>
+        </div>
+    </div>
+    
+
+
 </div>

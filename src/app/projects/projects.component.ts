@@ -1,40 +1,26 @@
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { CubeComponent } from '../cube/cube.component';
 import { CommonModule } from '@angular/common';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ProjectsService, BriefProjectCards, SkillsIcons } from '../data-services/projects.service';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
   imports: [CubeComponent, CommonModule],
   templateUrl: './projects.component.html',
-  styleUrl: './projects.component.scss'
+  styleUrl: './projects.component.scss',
 })
-export class ProjectsComponent implements AfterViewInit {
-
+export class ProjectsComponent{
   @ViewChild(CubeComponent) cubeComponent!: CubeComponent;
 
-  constructor() { }
+  briefProjectCards!: BriefProjectCards;
+  skills!: SkillsIcons;
 
-  ngAfterViewInit(): void {
-    gsap.registerPlugin(ScrollTrigger);
+  constructor(private projectsBrief: ProjectsService) {}
 
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        scrub: 10,
-        pin: true,
-        trigger: ".projectsWrapper",
-        start: "50% 50%",
-        endTrigger: ".projectsWrapper",
-        end: "bottom 50%",
-       // markers: true,
-      }
-    });
-
-    tl.to(this.cubeComponent.cubeRef.nativeElement, {  
-      rotateX: 900, 
-      rotateY: 900  
-    });
+  ngOnInit(): void {
+    this.briefProjectCards = this.projectsBrief.getBriefProjectCards();
+    this.skills = this.projectsBrief.getSkillsIcons();
   }
+
 }

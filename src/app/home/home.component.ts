@@ -1,24 +1,26 @@
 import { Component, OnInit } from '@angular/core';
 import { gsap } from 'gsap';
 import { HomeService } from '../data-services/home.service';
-import { ProjectsService, SkillsIcons } from '../data-services/projects.service';
+import {
+  ProjectsService,
+  SkillsIcons,
+} from '../data-services/projects.service';
 import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  styleUrl: './home.component.scss',
 })
 export class HomeComponent implements OnInit {
-text!: string
-skills!: SkillsIcons
-skillsKeys!: string[];
+  text!: string;
+  skills!: SkillsIcons;
+  skillsKeys!: string[];
 
-  constructor(  
+  constructor(
     private homeSection: HomeService,
-  private skillsIcons: ProjectsService,
-  
+    private skillsIcons: ProjectsService
   ) {}
 
   ngOnInit(): void {
@@ -34,9 +36,7 @@ skillsKeys!: string[];
       y: 50,
       duration: 1,
       ease: 'power3.out',
-      stagger: 0.3 
+      stagger: 0.3,
     });
-
   }
-
 }
