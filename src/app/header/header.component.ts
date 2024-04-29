@@ -34,7 +34,7 @@ export class HeaderComponent {
 
   checkActiveSection() {
     const scrollPosition = this.viewportScroller.getScrollPosition();
-    const sections = ['home', 'projects', 'experience', 'contact'];
+    const sections = ['home',  'projects', 'skills','experience', 'contact'];
     for (const section of sections) {
       const element = document.getElementById(section);
       if (element) {
