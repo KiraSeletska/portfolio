@@ -23,4 +23,5 @@ export class ProjectsService {
       getSkillsIcons(){
         return this.skillsIcons
       }
+      projectsVideo: string[] = ['']
 }
