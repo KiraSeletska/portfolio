@@ -8,11 +8,12 @@ import { HomeComponent } from './sections/home/home.component';
 import { ProjectsComponent } from './sections/projects/projects.component'; 
 import { SkillsComponent } from './sections/skills/skills.component';
 import { BrowserModule } from '@angular/platform-browser';
+import { FooterComponent } from './components/footer/footer.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, CommonModule, ContactComponent, ProjectsComponent, HomeComponent, ExperienceComponent, SkillsComponent],
+  imports: [RouterOutlet, HeaderComponent, CommonModule, ContactComponent, ProjectsComponent, HomeComponent, ExperienceComponent, SkillsComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

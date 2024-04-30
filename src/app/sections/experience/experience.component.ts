@@ -37,7 +37,6 @@ export class ExperienceComponent implements OnInit {
       duration: 20, 
       repeat: -1, 
       ease: 'linear',
-      markers: true
     });
   }
   

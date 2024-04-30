@@ -35,7 +35,7 @@ export class HeaderComponent {
   checkActiveSection() {
     const scrollPosition = this.viewportScroller.getScrollPosition();
     const scrollOffset = 100; // Отступ сверху для активации секции
-    const sections = ['home', 'projects', 'skills', 'experience', 'contact'];
+    const sections = ['home', 'projects', 'skills', 'experience'];
     
     for (const section of sections) {
       const element = document.getElementById(section);
