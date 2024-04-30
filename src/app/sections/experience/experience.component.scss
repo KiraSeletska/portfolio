@@ -11,8 +11,18 @@
   & h3 {
     font-size: 40px;
   }
+  & h6{
+    font-size: 25px;
+    margin-top: 20px;
+    &:hover{
+      color: rgb(209, 88, 88);
+    }
+  }
   & p {
     font-size: 30px;
+  }
+  & span{
+    font-weight: 700;
   }
   & .period,
   & .place {
@@ -24,6 +34,15 @@
 
     & .development-experience {
       margin-bottom: 50px;
+      & .links{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+
+        & a{
+          display: block;
+        }
+      }
     }
     & .experience-list {
       & .job {

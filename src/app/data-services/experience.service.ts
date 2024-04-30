@@ -6,6 +6,10 @@ export interface DevelopmentExperience {
     place: string;
     description: string;
     task: string;
+    portfolioWebSite: string;
+    portfolioSource: string;
+    gameWebSite: string;
+    gameSource: string;
   }
   
   export interface PreviousEmployment {
@@ -47,9 +51,14 @@ export class ExperienceService {
       title: 'Frontend Developer',
       period: '2023',
       place: 'Intership',
-      description:
-        'Transfer a board game online, create a website for a web designer. Our work was carried out in a team of three frontend developers under the guidance of a frontend architect. Tasks were assigned to the team or to each employee separately. Basic communication via GitHub',
-      task: '',
+      task:
+        'Transfer a board game online, create a website for a UI/UX designers',
+        description: 'Our work was carried out in a team of three frontend developers under the guidance of a frontend architect. Tasks were assigned to the team or to each employee separately. Basic communication via GitHub',
+      portfolioWebSite: 'https://igmat.github.io/LandingPortfolio/',
+      portfolioSource: 'https://github.com/Igmat/LandingPortfolio',
+      gameWebSite: 'https://igmat.github.io/SpaceExpatriateReact/',
+      gameSource: 'https://github.com/Igmat/SpaceExpatriateReact',
+
     },
     previousEmployment: [
       {
@@ -119,11 +128,11 @@ export class ExperienceService {
       period: '2022-2023',
       degree: '',
       knowledge:
-        'HTML5, CSS, SASS, JavaScript, React, Redux, Redux-toolkit, RTK-Query, SQL, noSQL and MongoDB, Algorithms, Project Management',
-      basicKnowledge: 'Java, QA, Linux',
+        'HTML5, CSS, SASS, JavaScript, React, Redux, Redux-toolkit, RTK-Query, SQL, noSQL and MongoDB, GitHub, Algorithms, Project Management',
+      basicKnowledge: 'Java, QA, Linux, Git',
       diploma:
-        'Online Store (JavaScript, React, Redux, Redux-toolkit, HTML, SASS, GitHub )',
-      source: '',
+        'Onlineshop Garten',
+      source: 'https://github.com/KiraSeletska/Project/tree/main/Project',
     },
     {
       title: 'Finance',

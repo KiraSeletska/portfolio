@@ -31,31 +31,32 @@ export class ProjectsService {
     return this.skillsIcons;
   }
 
-  projectsVideo: BriefProjectCards =[{
-    title:  "Language Cards",
+  projectsVideo: BriefProjectCards =[ {
+    title:  "Onlineshop Garten",
     skills: ['Javascript', 'React'],
-    link: '../../assets/video/LL.mp4',
+    link: '../../assets/video/OnlineStore.mp4',
   },
   {
-    title:  "Space Game",
+    title:  "Space Expatriate Game",
     skills: ['Typescript', 'React'],
     link: '../../assets/video/SpaceGame.mp4',
   },
   {
-    title:   'UI/UX Portfolio',
+    title:   'UI/UX Designer Portfolio',
     skills: ['Typescript', 'React'],
     link: '../../assets/video/WebPortfolio.mp4',
+  },
+  {
+    title:  "Language Cards",
+    skills: ['Javascript', 'React'],
+    link: '../../assets/video/LL.mp4',
   },
   {
     title:   "My First Portfolio",
     skills: ['Javascript', 'React'],
     link: '../../assets/video/MyFirstPortfolio.mp4',
   },
-  {
-    title:  "Online Store",
-    skills: ['Javascript', 'React'],
-    link: '../../assets/video/OnlineStore.mp4',
-  },
+ 
   {
     title:  "Todo",
     skills: ['Typescript', 'React'],
