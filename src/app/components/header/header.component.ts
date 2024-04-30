@@ -34,18 +34,24 @@ export class HeaderComponent {
 
   checkActiveSection() {
     const scrollPosition = this.viewportScroller.getScrollPosition();
-    const sections = ['home',  'projects', 'skills','experience', 'contact'];
+    const scrollOffset = 100; // Отступ сверху для активации секции
+    const sections = ['home', 'projects', 'skills', 'experience', 'contact'];
+    
     for (const section of sections) {
       const element = document.getElementById(section);
+      
       if (element) {
         const rect = element.getBoundingClientRect();
-        if (rect.top <= 0 && rect.bottom > 0) {
+        
+        // Проверяем, если верхняя и нижняя границы секции видны в окне
+        if (rect.top <= scrollOffset && rect.bottom > scrollOffset) {
           this.activeSection = section;
           break;
         }
       }
     }
   }
+  
 
   onWindowScroll() {
     const homeSection = document.getElementById('home');

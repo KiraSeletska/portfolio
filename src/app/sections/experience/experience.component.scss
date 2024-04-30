@@ -1,8 +1,45 @@
+.experience-container {
+  display: flex;
+  justify-content: space-between;
 
-.experienceWrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; 
+
+  & h2 {
+    font-size: 60px;
+    margin-bottom: 50px;
+    color: rgb(223, 103, 103);
   }
-  
+  & h3 {
+    font-size: 40px;
+  }
+  & p {
+    font-size: 30px;
+  }
+  & .period,
+  & .place {
+    font-size: 25px;
+    color: rgb(143, 143, 143);
+  }
+  & .experience-section {
+    flex: 1;
+
+    & .development-experience {
+      margin-bottom: 50px;
+    }
+    & .experience-list {
+      & .job {
+        margin-bottom: 50px;
+      }
+    }
+  }
+  & .education-languages-section {
+    flex: 1;
+    margin-left: 20px;
+    & .edu {
+      margin-bottom: 50px;
+    }
+    & .experienceCubeContainer{
+     //border: 2px solid red;
+     transform: translate(100px,200px);
+    }
+  }
+}

@@ -10,9 +10,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
-export class ContactComponent implements AfterViewInit{
-  @ViewChild(CubeComponent) cubeComponent!: CubeComponent;
-
+export class ContactComponent/* implements AfterViewInit*/{
+ // @ViewChild(CubeComponent) cubeComponent!: CubeComponent;
+/*
   ngAfterViewInit(): void {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -33,5 +33,5 @@ export class ContactComponent implements AfterViewInit{
       rotateY: 900,
     });
  
-}
+}*/
 }

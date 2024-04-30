@@ -26,7 +26,7 @@ export class ProfSoftSkillsComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     gsap.registerPlugin(ScrollTrigger);
   
-    const skillsSection = this.elementRef.nativeElement.querySelector('.skills');
+    const skillsSection = this.elementRef.nativeElement.querySelector('.skillsWrapper');
   
     ScrollTrigger.create({
       trigger: skillsSection,

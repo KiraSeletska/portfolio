@@ -31,7 +31,7 @@ export class CubeComponent implements AfterViewInit {
     gsap.set(".face", { 
       rotateY: (i) => this.rots[i].ry,
       rotateX: (i) => this.rots[i].rx,
-      transformOrigin: "50% 50% -150px",
+      transformOrigin: "50% 50% -250px",
       z: 150,
     });
 

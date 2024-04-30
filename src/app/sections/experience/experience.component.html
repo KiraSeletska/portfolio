@@ -1,4 +1,50 @@
-<div class="experienceWrapper">
-    <p>experience works!</p>
-</div>
+
+<div class="experience-container">
+    <div class="experience-section">
+      <h2>Experience</h2>
+      <div class="development-experience">
+        <h3>{{ developmentExperience.title }}</h3>
+        <p class="period">{{ developmentExperience.period }}</p>
+        <p class="place">{{ developmentExperience.place }}</p>
+        <p>{{ developmentExperience.description }}</p>
+      </div>
+      <div class="experience-list">
+       
+        <div *ngFor="let job of previousEmployment" class="job">
+          <h3>{{ job.title }}</h3>
+          <p class="period">{{ job.period }}</p>
+          <p class="place">{{ job.place }}</p>
+          <p class="description">{{ job.description }}</p>
+        </div>
+      </div>
+     
+    </div>
+    <div class="education-languages-section">
+      <div class="education-section">
+        <h2>Education</h2>
+        <div class="education-list">
+          <div *ngFor="let edu of education" class="edu">
+            <h3>{{ edu.title }}</h3>
+            <p>{{ edu.institution }}</p>
+            <p class="period">{{ edu.period }}</p>
+            <p class="place">{{ edu.place }}</p>
+            <p>{{ edu.degree }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="languages-section">
+        <h2>Languages</h2>
+        <div class="languages-list">
+          <p>English: {{ languages.english }}</p>
+          <p>Ukrainian: {{ languages.ukrainian }}</p>
+          <p>Russian: {{ languages.russian }}</p>
+        </div>
+      </div>
+      <div class="experienceCubeContainer">
+        <app-cube #experienceCube></app-cube>
+      </div>
+    
+    </div>
+  </div>
+
 
