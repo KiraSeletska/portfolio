@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { gsap } from 'gsap';
-import { HomeService } from '../data-services/home.service';
+import { HomeService } from '../../data-services/home.service'; 
 import {
   ProjectsService,
   SkillsIcons,
-} from '../data-services/projects.service';
+}from '../../data-services/projects.service';
 import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-home',

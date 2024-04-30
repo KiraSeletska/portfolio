@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HeaderComponent } from './header/header.component';
+import { HeaderComponent } from './components/header/header.component'; 
 import { CommonModule } from '@angular/common';
-import { ContactComponent } from './contact/contact.component';
-import { ExperienceComponent } from './experience/experience.component';
-import { HomeComponent } from './home/home.component';
-import { ProjectsComponent } from './projects/projects.component';
-import { SkillsComponent } from './skills/skills.component';
+import { ContactComponent } from './sections/contact/contact.component'; 
+import { ExperienceComponent } from './sections/experience/experience.component';
+import { HomeComponent } from './sections/home/home.component'; 
+import { ProjectsComponent } from './sections/projects/projects.component'; 
+import { SkillsComponent } from './sections/skills/skills.component';
 import { BrowserModule } from '@angular/platform-browser';
 
 @Component({

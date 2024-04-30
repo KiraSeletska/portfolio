@@ -1,9 +1,9 @@
 import { RouterModule, Routes } from '@angular/router';
-import { ContactComponent } from './contact/contact.component';
-import { HomeComponent } from './home/home.component';
-import { ProjectsComponent } from './projects/projects.component';
+import { ContactComponent } from './sections/contact/contact.component'; 
+import { HomeComponent } from './sections/home/home.component'; 
+import { ProjectsComponent } from './sections/projects/projects.component'; 
 import { NgModule } from '@angular/core';
-import { SkillsComponent } from './skills/skills.component';
+import { SkillsComponent } from './sections/skills/skills.component'; 
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },

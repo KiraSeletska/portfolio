@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
-import { CubeComponent } from '../cube/cube.component';
+import { CubeComponent } from '../../components/cube/cube.component'; 
 import { CommonModule } from '@angular/common';
-import { ProjectsService, BriefProjectCards, SkillsIcons } from '../data-services/projects.service';
+import { ProjectsService, BriefProjectCards, SkillsIcons } from '../../data-services/projects.service'; 
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 @Component({
