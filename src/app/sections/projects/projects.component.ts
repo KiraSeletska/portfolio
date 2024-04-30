@@ -14,7 +14,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 export class ProjectsComponent implements AfterViewInit{
   @ViewChildren('videoWrapper') videoWrappers!: QueryList<ElementRef>;
 
-
   briefProjectCards!: BriefProjectCards;
   skills!: SkillsIcons;
 

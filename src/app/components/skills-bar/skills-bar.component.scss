@@ -1,9 +1,9 @@
 .skill {
-  height: 100vh;
   & .progress-bar {
     & .title {
       transform: translateY(20px);
       margin-bottom: 30px;
+      font-size: 25px;
     }
 
     & .progress {
