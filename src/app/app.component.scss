@@ -1,13 +1,19 @@
-
-#projects, 
+#projects,
 #skills,
-#experience{
-    padding: 100px 0 0 30px;
-   
+#experience {
+  padding: 100px 0 30px;
 }
-.mainWrapper{
-    max-width: 1700px;
-    margin: auto;
- 
+.mainWrapper {
+  max-width: 1700px;
+  margin: auto;
 }
-
+@media only screen and (max-width: 1100px) {
+  .mainWrapper {
+    max-width: 1100px;
+  }
+  #projects,
+  #skills,
+  #experience {
+    padding: 50px 0 30px;
+  }
+}

@@ -7,45 +7,125 @@
   justify-content: center;
   align-items: center;
   height: min(100vh, 600px);
- // border: 2px solid red;
 
   & .photo {
     height: 100%;
-    background-image: url('../../../assets/user-photo/1.jpg');
+    background-image: url("../../../assets/user-photo/1.jpg");
     background-repeat: no-repeat;
     background-size: contain;
- background-position: center;
-
+    background-position: center;
   }
   & .info {
     height: 100%;
     display: flex;
     flex-direction: column;
 
-    & h1{
+    & h1 {
       font-size: 85px;
     }
-    & h2{
+    & h2 {
       font-size: 65px;
     }
     & .skills {
       width: 100%;
       display: flex;
- 
+
       & .skill-icon {
         width: 60px;
         margin-right: 20px;
       }
     }
-    & .text{
+    & .text {
       height: 100%;
       width: 90%;
       display: flex;
       flex-direction: column;
-      justify-content: center; 
-      align-items: center; 
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .homeWrapper {
+    grid-template-columns: 30% 68%;
+    height: auto;
+    & .info {
+      & h1 {
+        font-size: 60px;
+      }
+      & h2 {
+        font-size: 40px;
+      }
+      & .skills {
+        margin: 15px 0;
+
+        & .skill-icon {
+          width: 40px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .homeWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0 15px;
+    position: relative;
+    & .info{
+    & h1 {
+      position: absolute;
+      right: 0;
+      font-size: 30px !important;
+      color: gray;
+    }
+    & h2 {
+      font-size: 30px;
+      margin-top: 100px;
     }
 
+    & .photo {
+      display: none;
+    }
+    & .skills {
+      margin: 15px 0;
+      width: auto;
+      position: absolute;
+      top: 30px;
+      right: 0;
+
+      & .skill-icon {
+        width: 20px;
+        margin-right: 8px;
+      }
+    }}
   }
- 
+}
+@media only screen and (max-width: 600px) {
+  .homeWrapper {
+    & .info {
+      & h1 {
+        font-size: 30px !important;
+      }
+      & h2 {
+        font-size: 30px;
+        margin-top: 100px;
+      }
+      & .skills {
+        margin: 15px 0;
+        width: auto;
+        position: absolute;
+        top: 30px;
+        right: 0;
+
+        & .skill-icon {
+          width: 20px;
+          margin-right: 8px;
+        }
+      }
+    }
+  }
 }
