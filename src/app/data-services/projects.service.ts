@@ -4,6 +4,7 @@ export interface SkillsIcons {
   [key: string]: string;
 }
 interface BriefProjectCard {
+  id: string;
   title: string;
   skills: string[]; 
   link: string; 
@@ -32,34 +33,35 @@ export class ProjectsService {
   }
 
   projectsVideo: BriefProjectCards =[ {
+    id: 'onlineshope',
     title:  "Onlineshop Garten",
-    skills: ['Javascript', 'React'],
+    skills: ['Javascript', 'React', 'Redux', 'Figma'],
     link: '../../assets/video/OnlineStore.mp4',
   },
-  {
+  {id: 'spacegame',
     title:  "Space Expatriate Game",
-    skills: ['Typescript', 'React'],
+    skills: ['Typescript', 'React', 'MobX'],
     link: '../../assets/video/SpaceGame.mp4',
   },
-  {
+  {   id: 'designerportfolio',
     title:   'UI/UX Designer Portfolio',
-    skills: ['Typescript', 'React'],
+    skills: ['Typescript', 'React', 'Figma'],
     link: '../../assets/video/WebPortfolio.mp4',
   },
-  {
+  { id: 'languagecards',
     title:  "Language Cards",
-    skills: ['Javascript', 'React'],
+    skills: ['Javascript', 'React', 'Redux'],
     link: '../../assets/video/LL.mp4',
   },
-  {
+  {  id: 'myportfolio',
     title:   "My First Portfolio",
     skills: ['Javascript', 'React'],
     link: '../../assets/video/MyFirstPortfolio.mp4',
   },
  
-  {
+  { id: 'todo',
     title:  "Todo",
-    skills: ['Typescript', 'React'],
+    skills: ['Typescript', 'React', 'Redux'],
     link: '../../assets/video/Todo.mp4',
   },
 ]

@@ -4,13 +4,19 @@ import { HomeComponent } from './sections/home/home.component';
 import { ProjectsComponent } from './sections/projects/projects.component'; 
 import { NgModule } from '@angular/core';
 import { SkillsComponent } from './sections/skills/skills.component'; 
+import { ProjectComponent } from './components/project/project.component';
+import { MainSectionsComponentComponent } from './components/main-sections-component/main-sections-component.component';
 
 export const routes: Routes = [
   //{ path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
-  { path: 'skills', component: SkillsComponent },
-  { path: 'contact', component: ContactComponent },
-  { path: 'projects', component: ProjectsComponent },
+ // { path: 'home', component: HomeComponent },
+ // { path: 'skills', component: SkillsComponent },
+ // { path: 'contact', component: ContactComponent },
+ // { path: 'projects', component: ProjectsComponent },
+ { path: '', redirectTo: '/home', pathMatch: 'full' },
+   { path: 'home', component: MainSectionsComponentComponent },
+  { path: 'project/:id', component: ProjectComponent },
+ // { path: 'product/:id', component: ProductDetailComponent }
 ];
 
 @NgModule({

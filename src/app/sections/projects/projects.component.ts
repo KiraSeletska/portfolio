@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { ProjectsService, BriefProjectCards, SkillsIcons } from '../../data-services/projects.service'; 
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-projects',
   standalone: true,
@@ -12,12 +14,15 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
   styleUrl: './projects.component.scss',
 })
 export class ProjectsComponent implements AfterViewInit{
+  
   @ViewChildren('videoWrapper') videoWrappers!: QueryList<ElementRef>;
 
   briefProjectCards!: BriefProjectCards;
   skills!: SkillsIcons;
 
-  constructor(private projectsBrief: ProjectsService) {}
+  constructor(private projectsBrief: ProjectsService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.briefProjectCards = this.projectsBrief.getBriefProjectCards();
@@ -43,6 +48,10 @@ export class ProjectsComponent implements AfterViewInit{
         stagger: 0.3 * index
       });
     });
+  }
+
+  goToProjectDetails(id: string) {
+    this.router.navigate(['/project', id]);
   }
   
 }
