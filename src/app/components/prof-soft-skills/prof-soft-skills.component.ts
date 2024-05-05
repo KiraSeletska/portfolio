@@ -38,7 +38,7 @@ export class ProfSoftSkillsComponent implements AfterViewInit {
         const squares: Element[] = gsap.utils.toArray('.square') as Element[];
         squares.forEach(square => {
           tl.to(square, { 
-            duration: 0.5, 
+            duration: 0.3, 
             width: '10px', 
             height: '10px' }); 
         });
