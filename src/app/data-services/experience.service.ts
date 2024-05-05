@@ -122,7 +122,7 @@ export class ExperienceService {
   }
   education: Education[] = [
     {
-      title: 'Fontend Developer ',
+      title: 'Frontend Developer ',
       institution: 'Starta Institute by Tel-Ran',
       place: 'Germany, Berlin',
       period: '2022-2023',

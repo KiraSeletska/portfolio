@@ -42,7 +42,7 @@
           <p *ngIf="edu.knowledge"><span>Professional: </span> {{ edu.knowledge }}</p>
           <p *ngIf="edu.basicKnowledge"><span>Basic: </span> {{ edu.basicKnowledge}}</p>
           <p *ngIf="edu.diploma"><span>Diploma project: </span> {{ edu.diploma }}</p>
-          <ng-container *ngIf="edu.source"> <!-- Проверяем наличие данных в edu.source -->
+          <ng-container *ngIf="edu.source"> 
             <a href={{edu.source}} target="_blank"><h6>Onlineshop Garten</h6></a>
           </ng-container>
         </div>
