@@ -6,7 +6,7 @@ import { NgModule } from '@angular/core';
 import { SkillsComponent } from './sections/skills/skills.component'; 
 
 export const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  //{ path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'skills', component: SkillsComponent },
   { path: 'contact', component: ContactComponent },
