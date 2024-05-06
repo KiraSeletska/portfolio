@@ -39,6 +39,7 @@ export interface DevelopmentExperience {
   export interface Languages {
     english: string;
     ukrainian: string;
+    german: string;
     russian: string;
   }
   
@@ -152,6 +153,7 @@ getEducation(){
   languages: Languages = {
     english: 'Upper-Intermediate',
     ukrainian: 'Native',
+    german: 'Elementary',
     russian: 'Native',
   };
   getLanguage(){
