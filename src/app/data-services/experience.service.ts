@@ -75,7 +75,7 @@ export class ExperienceService {
           'Commercial real estate management (24 objects). Pilot project',
       },
       {
-        title: 'Head of Sales/Commercial Director',
+        title: 'Head of Sales',
         period: '2018-2020',
         place: 'Kyiv, Ukraine',
         description:
@@ -106,13 +106,13 @@ export class ExperienceService {
         title: 'Sales Manager',
         period: '2011-2012',
         place: 'Kyiv, Ukraine',
-        description: "Increasing sales in the assigned territory."
+        description: "Increasing sales in the assigned territory"
       },
       {
         title: 'Sales Manager',
         period: '2009-2011',
         place: 'Romny-Konotop, Ukraine',
-        description: "Increasing sales in the assigned territory."
+        description: "Increasing sales in the assigned territory"
           
       },
     ],

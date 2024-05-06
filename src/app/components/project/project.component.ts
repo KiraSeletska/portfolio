@@ -12,27 +12,6 @@ import { ProjectsService, SkillsIcons } from '../../data-services/projects.servi
   styleUrl: './project.component.scss'
 })
 
-/*
-export class ProjectComponent implements OnInit {
-  project: Project | undefined;
-
-  constructor(private router: ActivatedRoute, 
-
-    private projectService: ProjectService) {}
-
-  ngOnInit(): void {
-    this.router.paramMap.subscribe(params => {
-      const projectId = params.get('id');
-      if (projectId) {
-        this.project = this.projectService.getProjectById(projectId);
-      }
-    });
-  }
-  navigateToMain(): void {
-    this.router.navigate(['/home']); // Переход на главную страницу
-  }
-}
-*/
 export class ProjectComponent implements OnInit {
   project: Project | undefined;
   skills!: SkillsIcons;
@@ -45,19 +24,26 @@ export class ProjectComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    // Получаем id проекта из параметра маршрута
+
+    window.scrollTo(0, 0);
+
     this.skills = this.projectsBrief.getSkillsIcons();
     this.route.paramMap.subscribe(params => {
       const projectId = params.get('id');
       if (projectId) {
-        // Получаем информацию о проекте по его id
         this.project = this.projectService.getProjectById(projectId);
       }
     });
   }
 
-  // Функция для перехода на главную страницу
   navigateToMain(): void {
     this.router.navigate(['/home']);
+
+    setTimeout(() => {
+      const projectsSection = document.getElementById('projects');
+      if (projectsSection) {
+        projectsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 100);
   }
 }
