@@ -58,7 +58,14 @@
 }
 
 @media only screen and (max-width: 768px) {
- .projectsWrapper {
-  pointer-events: none;
-}
+  .projectsWrapper {
+    & .projectsContainer {
+      & .projectWrapper {
+        & .projectsInfo {
+          pointer-events: none;
+
+        }
+      }
+    }
+  }
 }

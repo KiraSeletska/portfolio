@@ -4,14 +4,7 @@
         <div  *ngFor="let projectCard of briefProjectCards" class="projectWrapper" #videoWrapper 
         (click)="goToProjectDetails(projectCard.id)"
         (touchstart)="goToProjectDetails(projectCard.id)"
-        >
-          
-         <!--
-<video autoplay loop>
-                <source [src]="projectCard.link" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-         -->   
+        >  
          <img [src]="projectCard.link"  alt="">
             <div class="projectsInfo">
                
